@@ -1,0 +1,162 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, Main Content, Footer */
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+header, footer {
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px; /* Nav, Main Content, Aside */
+  overflow-y: hidden;
+}
+
+.title {
+  grid-column: 2;
+  text-align: center;
+  margin: 20px;
+}
+
+.main-content {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav,
+aside {
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+nav {
+  background-color: #eee;
+}
+
+aside {
+  background-color: #eee;
+}
+
+form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input,
+button {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #aaa;
+  color: #555;
+  cursor: not-allowed;
+  border: 2px solid #000000;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  width: 30%;
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #000000;
+}
+
+.button1:hover {
+  background-color: #0ed829;
+  color: white;
+  border: 2px solid #000000;
+}
+
+.button2:hover {
+  background-color: #aa0404;
+  color: white;
+  border: 2px solid #000000;
+}
+
+nav ul,
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li,
+aside li {
+  margin-bottom: 8px;
+}
+
+nav a,
+aside a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #ddd;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+nav a:hover,
+aside a:hover {
+  background-color: #ccc;
+}
+
+@media only screen and (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+  nav,aside {
+    display: none;
+  }
+}

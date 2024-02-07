@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+html,body {
+    margin: 0;
+    height: 100%;
+}
+
+nav,
+aside {
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
